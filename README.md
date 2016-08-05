@@ -158,7 +158,22 @@ arn:aws:apigateway:<YOUR REGION>:lambda:path/2015-03-31/functions/<YOUR LAMBDA F
 * Once you have modified and saved the Swagger file to call the correct Lambda function and use your roles [create a new API in Amazon API Gateway](https://console.aws.amazon.com/apigateway/home?region=us-east-1#/apis/create) with the **Import from Swagger** feature.
 * You should now be able to deploy and test your **API Gateway Secure Pet Store** API with Amazon API Gateway
 
+# Setting up the web sample
+
+## Introduction
+The web sample application is located under the ```/src/main/resources/web_sample folder```.
+
 # Setting up the iOS sample
+
+## Step by Step setup
+* Update `index.html` with your:
+..* FB App Id
+..* AWS Federated Identity Pool
+..* AWS region
+* Serve folder contents from your favorite web server or `S3`.
+* Make sure to whitelist FB oauth redirect.
+* Run and check console to see that it works. Expect to see a message like this in the console: `Cognito Identity Id: us-east-1:5f0f0537-dd55-4349-8b2f-d5df47ed8e41`
+* After it works, try modifying `index.html` to use the aws credentials to make a call to your API by adding a generated javascript SDK from API Gateway.
 
 ## Introduction
 The iOS sample application is located under the ```/src/main/resources/ios_sample folder```. It uses [CocoaPods](https://cocoapods.org/) to retrieve its dependencies and includes an iOS client SDK generated with API Gateway.
