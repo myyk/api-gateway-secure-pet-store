@@ -99,7 +99,7 @@ arn:aws:apigateway:<YOUR REGION>:lambda:path/2015-03-31/functions/<YOUR LAMBDA F
 
    Trust Policy for the AWS Lambda invocation role:
 
-   ```json
+```json
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -116,7 +116,7 @@ arn:aws:apigateway:<YOUR REGION>:lambda:path/2015-03-31/functions/<YOUR LAMBDA F
 
    Policy for the AWS Lambda invocation role:
 
-   ```json
+```json
 {
     "Version": "2012-10-17",
     "Statement": [
@@ -138,7 +138,7 @@ arn:aws:apigateway:<YOUR REGION>:lambda:path/2015-03-31/functions/<YOUR LAMBDA F
 * In the IAM console navigate to the roles list and open the authenticated role of your Cognito Identity Pool - the role is likely to be called **Cognito_"IdentityPoolName"Auth_Role**
 * Change the policy to:
 
-   ```json
+```json
 {
     "Version": "2012-10-17",
     "Statement": [
